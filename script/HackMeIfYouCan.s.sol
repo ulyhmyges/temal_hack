@@ -29,10 +29,10 @@ contract HackMeIfYouCanScript is Script
         // flip method
         console.log("============================== flip() method ==============================");
 
-    //    console.log("nb: ",(block.number / 6275657625726723324896521676682367236752985978263786257989175917));
         console.log("nb: ",block.number );
         console.log(hackContract.flip(false));
         
+    
         // vm.roll(block.number + 1);
         // console.log("nb: ",block.number );
         // console.log(hackContract.flip(false));
@@ -74,34 +74,39 @@ contract HackMeIfYouCanScript is Script
         // addPoint method
         console.log("============================== addPoint() method ==============================");
         
-        // myContract.callAddPoint();
-        
+        myContract.callAddPoint();
         console.log("getMarks: ", hackContract.getMarks(wallet));
 
         
         // transfer() method
         console.log("============================== transfer() method ==============================");
       
-        // console.log(hackContract.balanceOf(wallet));
-        // //hackContract.transfer{from: wallet}(wallet, 1000000000000000);
-        // //address(hackContract).transfer{value: 1000000000000000 wei}(wallet);
-        // console.log("balanceof: ", hackContract.balanceOf(wallet));
-        // console.log(msg.sender);
-        // console.log("wallet: ", wallet);
-        // console.log(hackContract.balanceOf(wallet) - 20);
-        // console.log("getMarks: ", hackContract.getMarks(wallet));
-        
-        //console.log("getMarks: ", hackContract.getMarks(wallet));
+        // ...
+        console.log("getMarks: ", hackContract.getMarks(wallet));
 
         // receive() method
-        //console.log("============================== receive() method ==============================");
+        console.log("============================== receive() method ==============================");
         
-        // hackContract.contribute{value: 1 wei}();
-        // console.log("getContribute: ", hackContract.getContribution());
-        // (bool ok, ) = address(hackContract).call{value: 1 wei}("");
-        // require(ok, "Call failed!");
+        hackContract.contribute{value: 1 wei}();
+        console.log("getContribute: ", hackContract.getContribution());
+        (bool ok, ) = address(hackContract).call{value: 1 wei}("");
+        require(ok, "Call failed!");
         
-        //console.log("getMarks: ", hackContract.getMarks(wallet));
+        console.log("getMarks: ", hackContract.getMarks(wallet));
+
+        // sendPassword() method
+        console.log("============================== sendPassword() method ==============================");
+
+        hackContract.sendPassword(bytes32(0xde241fe7f783f2ed343248c0762dade0cf4eea6ed49dfe2f9f1267483c9eade8));
+        console.log("getMarks: ", hackContract.getMarks(wallet));
+
+        // sendKey() method
+        console.log("============================== sendKey() method ==============================");
+
+        hackContract.sendKey(bytes16(bytes32(0x4cded594c37730434fcf53dd25e29ab5c1f850633900601e94b37f7818fe8ee2)));
+        console.log("getMarks: ", hackContract.getMarks(wallet));
+        console.log("getMarks: ", hackContract.getMarks(wallet));
+        console.log(hackContract.getConsecutiveWins(wallet));
 
 
 

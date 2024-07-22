@@ -18,6 +18,9 @@ Add 1 wei of contribution by calling contribute() method
 Send Ether to the contract will trigger the receive() method
     `address(contract).call{value: 1 wei}("");`
 
+## sendPassword() method
+
+## sendKey() method
 
 
 Foundry consists of:
