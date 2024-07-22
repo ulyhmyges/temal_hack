@@ -19,9 +19,12 @@ Send Ether to the contract will trigger the receive() method
     `address(contract).call{value: 1 wei}("");`
 
 ## sendPassword() method
+slot 3 for password
+cast storage 0x9D29D33d4329640e96cC259E141838EB3EB2f1d9 3 --rpc-url $SEPOLIA_URL  
 
 ## sendKey() method
-
+slot 4 + 12 for key
+cast storage 0x9D29D33d4329640e96cC259E141838EB3EB2f1d9 16  --rpc-url $SEPOLIA_URL 
 
 Foundry consists of:
 
