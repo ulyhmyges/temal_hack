@@ -1,6 +1,18 @@
-## Foundry
+## HackMeIfYouCan CTF
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### 7 methods
+
+## flip() method
+La variable 'side' dans l'implémentation de la méthode est toujours égale à false.
+Il faut effectuer 10 appels de la méthode avec la contrainte de changer de block.number à chaque nouvel appel.
+
+## addPoint() method
+You need to call this method indirectly.
+I created another contract "MyContract" that calls the addPoint() method
+through the method MyContract.callAddPoint().
+
+## method
+
 
 Foundry consists of:
 
@@ -9,11 +21,9 @@ Foundry consists of:
 -   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
 -   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
 
-https://book.getfoundry.sh/
 
-## Usage
+## Usage of Foundry
 
 ### Build
 
