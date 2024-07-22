@@ -11,7 +11,13 @@ You need to call this method indirectly.
 I created another contract "MyContract" that calls the addPoint() method
 through the method MyContract.callAddPoint().
 
-## method
+## receive() method
+Add 1 wei of contribution by calling contribute() method
+    `contract.contribute{value: 1 wei}();``
+
+Send Ether to the contract will trigger the receive() method
+    `address(contract).call{value: 1 wei}("");`
+
 
 
 Foundry consists of:
